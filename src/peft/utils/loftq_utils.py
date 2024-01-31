@@ -190,6 +190,8 @@ def loftq_init(weight: Union[torch.Tensor, torch.nn.Parameter], num_bits: int, r
     if num_iter <= 0:
         raise ValueError("Number of iterations must be greater than 0")
 
+    print(f"Debug:", weight.size())
+
     out_feature, in_feature = weight.size()
     device = weight.device
     dtype = weight.dtype
